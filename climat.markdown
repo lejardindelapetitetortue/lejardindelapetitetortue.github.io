@@ -141,7 +141,7 @@ permalink: /climat/
                 {x:'2021-06-01', y:27.8}, 
                 {x:'2021-06-02', y:24.4}, 
                 {x:'2021-06-03', y:21.5}, 
-                {x:'2021-06-04', y:13.3}, 
+                {x:'2021-06-04', y:14.1}, 
             ];
     var avgTemp = [];
     for (var i in maxTemp) {
@@ -197,6 +197,7 @@ permalink: /climat/
                 {x:'2021-05-25', y:3.6}, 
                 {x:'2021-06-02', y:6.4}, 
                 {x:'2021-06-03', y:1.2}, 
+                {x:'2021-06-04', y:8}, 
             ],
             backgroundColor: 'lightblue',
             label: 'Précipitations (mm)'
