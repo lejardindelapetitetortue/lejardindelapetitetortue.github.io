@@ -18,13 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Le Jardin de la Petite Tortue
+title: La Petite Tortue
 email: lejardindelapetitetortue@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Fruits et Légumes
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
+logo: /assets/PetiteTortueLogo.png
+logo_alt: La Petite Tortue
 # collections_dir: collections
 # collections:
 #   legumes:
@@ -35,6 +36,9 @@ theme: hitchens-theme
 #theme: minima
 plugins:
   - jekyll-feed
+
+hide_search: true
+hide_credits: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

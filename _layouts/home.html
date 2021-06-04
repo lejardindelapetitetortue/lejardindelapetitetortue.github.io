@@ -8,17 +8,27 @@ layout: default
   {% include back-link.html %}
 {% else %}
   <header class="site-masthead">
+    
+    
+    
+    {% if site.logo %}
+
+      <img width="40%" src="{{ site.logo }}" alt="{{ site.logo_alt }}"/>
+
+    {% else %} 
+      {% if site.title %}
+        <h1>
+          {{ site.title }}
+        </h1>
+      {% endif %}
+      {% if site.description %}
+        <h2>
+          {{ site.description }}
+        </h2>
+      {% endif %}
+    {% endif %}
+
     {% include menu.html %}
-    {% if site.title %}
-      <h1>
-        {{ site.title }}
-      </h1>
-    {% endif %}
-    {% if site.title %}
-      <h2>
-        {{ site.description }}
-      </h2>
-    {% endif %}
   </header>
 {% endif %}
 
@@ -28,7 +38,7 @@ layout: default
     {% if site.paginate and site.paginate_path and paginator.page > 1 %}
       Page {{ paginator.page }}
     {% else %}
-      Contents
+      Articles
     {% endif %}
   </h1>
 
