@@ -33,7 +33,7 @@ logo_alt: La Petite Tortue
 #     output: true
 
 # Build settings
-theme: hitchens-theme
+#theme: hitchens-theme
 #theme: minima
 plugins:
   - jekyll-feed
