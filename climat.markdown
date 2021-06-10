@@ -2,6 +2,8 @@
 layout: page
 title: Climat
 permalink: /climat/
+sitemap:
+ changefreq: daily
 ---
 <script src="../assets/chart.js/dist/Chart.bundle.min.js"></script>
 <canvas id="myChart" ></canvas>
@@ -76,6 +78,10 @@ permalink: /climat/
                 {x:'2021-06-04', y:10.1}, 
                 {x:'2021-06-05', y:7.4}, 
                 {x:'2021-06-06', y:7}, 
+                {x:'2021-06-07', y:9.3}, 
+                {x:'2021-06-08', y:9.3}, 
+                {x:'2021-06-09', y:11}, 
+                {x:'2021-06-10', y:10.3}, 
             ];
     var maxTemp = [
                 {x:'2021-03-31', y:23.9},
@@ -146,6 +152,9 @@ permalink: /climat/
                 {x:'2021-06-04', y:14.1}, 
                 {x:'2021-06-05', y:23}, 
                 {x:'2021-06-06', y:22.4}, 
+                {x:'2021-06-07', y:23.6}, 
+                {x:'2021-06-08', y:26.8}, 
+                {x:'2021-06-10', y:28.6}, 
             ];
     var avgTemp = [];
     for (var i in maxTemp) {
