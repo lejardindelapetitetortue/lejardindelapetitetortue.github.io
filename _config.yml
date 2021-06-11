@@ -24,7 +24,7 @@ email: lejardindelapetitetortue@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Fruits et Légumes, Jardin Potager, Sol vivant
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lejardindelapetitetortue.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 logo: /assets/PetiteTortueLogo.png
 logo_alt: La Petite Tortue
 # collections_dir: collections
