@@ -23,6 +23,7 @@
   &:hover,
   &:focus {
     opacity: 1 !important;
+    color: $grass !important;
   }
   @media (min-width: $on-tablet) {
     display: flex;
