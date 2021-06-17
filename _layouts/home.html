@@ -34,7 +34,9 @@ layout: default
 
 <main class="home" id="main" role="main" aria-label="Content">
 
+  {%- if jekyll.environment == 'production'  -%}
   <img src="https://dol.roflcopter.fr/h/103sC_hEkpDhP" alt="">
+  {%- endif -%}
 
   <h1 class="content-title divided">
     {% if site.paginate and site.paginate_path and paginator.page > 1 %}
