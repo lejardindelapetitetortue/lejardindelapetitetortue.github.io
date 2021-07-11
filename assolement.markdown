@@ -181,7 +181,7 @@ Légende:
         </tr>
         <tr>
             <td class="bra"></td>
-            <td colspan="4" >Bracicacées</td>
+            <td colspan="4" >Brassicacées</td>
         </tr>
         <tr>
             <td class="cuc"></td>
