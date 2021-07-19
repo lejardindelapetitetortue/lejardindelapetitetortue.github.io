@@ -147,11 +147,11 @@ des planches 1 à 18 sans la planche 11.
         </tr>
         <tr>
             <td>20</td>
-            <td colspan="4" class="sol">Tomates cerises (Cerise noire et poire jaune)</td>
+            <td colspan="4" class="sol">Tomates cerises (Cerise noire)</td>
         </tr>
         <tr>
             <td>21</td>
-            <td colspan="4" class="sol">Tomates cerises (Cerise noire et orange fiz)</td>
+            <td colspan="4" class="sol">Tomates cerises (Poire jaune et orange ovale)</td>
         </tr>
         
     </tbody>
@@ -162,40 +162,42 @@ Légende:
 <table>
     <thead>
         <tr>
+            <!-- <th width="10%"></th>
+            <th width="40%"></th>
             <th width="10%"></th>
-            <th width="80%"></th>
+            <th width="40%"></th> -->
         </tr>
     </thead>
     <tbody>
         <tr>
             <td class="sol"></td>
             <td colspan="4" >Solanacées</td>
-        </tr>
-        <tr>
+        <!-- </tr>
+        <tr> -->
             <td class="all"></td>
             <td colspan="4" >Alliacées</td>
         </tr>
         <tr>
             <td class="ast"></td>
             <td colspan="4" >Astéracées</td>
-        </tr>
-        <tr>
+        <!-- </tr>
+        <tr> -->
             <td class="bra"></td>
             <td colspan="4" >Brassicacées</td>
         </tr>
         <tr>
             <td class="cuc"></td>
             <td colspan="4" >Cucurbitacées</td>
-        </tr>
-        <tr>
+        <!-- </tr>
+        <tr> -->
             <td class="api"></td>
             <td colspan="4" >Apiacées</td>
         </tr>
         <tr>
             <td class="che"></td>
             <td colspan="4" >Chénopodiacées</td>
-        </tr>
-        <tr>
+        <!-- </tr>
+        <tr> -->
             <td class="ast"></td>
             <td colspan="4" >Valérianacées</td>
         </tr>
