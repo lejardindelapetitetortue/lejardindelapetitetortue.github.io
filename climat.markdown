@@ -8,6 +8,7 @@ sitemap:
 <script src="../assets/chart.js/dist/Chart.bundle.min.js"></script>
 <canvas id="myChart" ></canvas>
 <canvas id="myChartRain" ></canvas>
+<!-- <canvas id="myChartAvg" ></canvas> -->
 <script>
 
     var minTempNorm = [
@@ -24,17 +25,17 @@ sitemap:
 
                 {x:'2021-08-01', y:13.2},
                 {x:'2021-08-31', y:13.2},
+/*
+                {x:'2021-09-01', y:11.1},
+                {x:'2021-09-30', y:11.1},
 
-                /*{x:'2021-09-01', y:11.1},
-                {x:'2021-09-30', y:11.1},*/
+                {x:'2021-10-01', y:8.7},
+                {x:'2021-10-31', y:8.7},
 
-                /*{x:'2021-10-01', y:8.7},
-                {x:'2021-10-31', y:8.7},*/
+                {x:'2021-11-01', y:5.3},
+                {x:'2021-11-30', y:5.3},
 
-                /*{x:'2021-11-01', y:5.3},
-                {x:'2021-11-30', y:5.3},*/
-
-                /*{x:'2021-12-01', y:3},
+                {x:'2021-12-01', y:3},
                 {x:'2021-12-31', y:3},*/
     ];
     var maxTempNorm = [
@@ -50,21 +51,20 @@ sitemap:
 
                 {x:'2021-08-01', y:22.8},
                 {x:'2021-08-31', y:22.8},
+/*
+                {x:'2021-09-01', y:20.1},
+                {x:'2021-09-30', y:20.1},
 
-                /*{x:'2021-09-01', y:20.1},
-                {x:'2021-09-30', y:20.1},*/
+                {x:'2021-10-01', y:16.1},
+                {x:'2021-10-31', y:16.1},
 
-                /*{x:'2021-10-01', y:16.1},
-                {x:'2021-10-31', y:16.1},*/
+                {x:'2021-11-01', y:11.5},
+                {x:'2021-11-30', y:11.5},
 
-                /*{x:'2021-11-01', y:11.5},
-                {x:'2021-11-30', y:11.5},*/
-
-                /*{x:'2021-12-01', y:8.3},
+                {x:'2021-12-01', y:8.3},
                 {x:'2021-12-31', y:8.3},*/
     ];
     var minTemp = [
-                {x:'2021-03-31', y:11.7},
                 {x:'2021-04-01', y:10.8}, 
                 {x:'2021-04-02', y:4.5},
                 {x:'2021-04-03', y:3.9},
@@ -202,9 +202,21 @@ sitemap:
                 {x:'2021-08-13', y:12.3}, 
                 {x:'2021-08-14', y:12.3}, 
                 {x:'2021-08-15', y:12}, 
+                {x:'2021-08-16', y:14.1}, 
+                {x:'2021-08-17', y:10.8}, 
+                {x:'2021-08-18', y:13.6}, 
+                {x:'2021-08-19', y:12.7}, 
+                {x:'2021-08-20', y:12.5}, 
+                {x:'2021-08-21', y:11.4}, 
+                {x:'2021-08-22', y:13.4}, 
+                {x:'2021-08-23', y:11.7}, 
+                {x:'2021-08-24', y:12.9}, 
+                {x:'2021-08-25', y:9.4}, 
+                {x:'2021-08-26', y:10.1}, 
+                {x:'2021-08-27', y:10.7}, 
+                {x:'2021-08-28', y:8.3}, 
             ];
     var maxTemp = [
-                {x:'2021-03-31', y:23.9},
                 {x:'2021-04-01', y:24},
                 {x:'2021-04-02', y:12.3},
                 {x:'2021-04-03', y:9.5},
@@ -341,45 +353,39 @@ sitemap:
                 {x:'2021-08-13', y:25.3}, 
                 {x:'2021-08-14', y:31.5}, 
                 {x:'2021-08-15', y:23}, 
+                {x:'2021-08-16', y:19.7}, 
+                {x:'2021-08-17', y:19}, 
+                {x:'2021-08-18', y:18.5}, 
+                {x:'2021-08-19', y:19.1}, 
+                {x:'2021-08-20', y:23}, 
+                {x:'2021-08-21', y:21.3}, 
+                {x:'2021-08-22', y:21.2}, 
+                {x:'2021-08-23', y:23.2}, 
+                {x:'2021-08-24', y:24}, 
+                {x:'2021-08-25', y:24.7}, 
+                {x:'2021-08-26', y:19.6}, 
+                {x:'2021-08-27', y:21.9}, 
+                {x:'2021-08-28', y:22}, 
             ];
-    var avgTemp = [];
-    for (var i in maxTemp) {
-        avgTemp.push({x: maxTemp[i].x,y: (maxTemp[i].y+minTemp[i].y)/2});
-    }
+
+
     var ctx = 'myChart';
     var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         datasets: [{
-            data: maxTempNorm,
-            borderColor: '#ffcccb',
-            fill: false,
-            label: 'Norm. max (°C)',
-            pointStyle: 'line',
-            tension: 0
-        },{
-            data: minTempNorm,
-            borderColor: 'lightblue',
-            fill: false,
-            label: 'Norm. min (°C)',
-            pointStyle: 'line',
-            tension: 0
-        },{
             data: minTemp,
             borderColor: 'blue',
             fill: false,
-            label: 'Temp. min (°C)'
+            label: 'Temp. min (°C)',
+            pointRadius: 0
         }, {
             data: maxTemp,
             borderColor: 'red',
             fill: false,
-            label: 'Temp. max (°C)'
-        }, /*{
-            data: avgTemp,
-            borderColor: 'orange',
-            fill: false,
-            label: 'Temp. avg (°C)'
-        },*/],
+            label: 'Temp. max (°C)',
+            pointRadius: 0
+        }, ],
     },
     options: {
         scales: {
@@ -396,8 +402,12 @@ sitemap:
     
 });
 
+/*
+    PLUIE
+*/
+
 var pluie = [
-                {x:'2021-03-31', y:0},
+                {x:'2021-04-01', y:0},
                 {x:'2021-04-06', y:0.4},
                 {x:'2021-04-07', y:2.8},
                 {x:'2021-04-09', y:0.8},
@@ -456,8 +466,10 @@ var pluie = [
                 {x:'2021-08-09', y:17.6}, 
                 {x:'2021-08-09', y:17.6}, 
                 {x:'2021-08-10', y:2}, 
-
-                {x:'2021-08-31', y:0}, 
+                {x:'2021-08-16', y:2}, 
+                {x:'2021-08-20', y:1.2}, 
+                {x:'2021-08-21', y:2}, 
+                {x:'2021-08-31', y:0}
             ];
 var cumul = [];
 for (var i in pluie) {
@@ -476,19 +488,165 @@ for (var i in pluie) {
 
 var ctx = 'myChartRain';
     var myChartRain = new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: [{
+                type: 'line',
+                data: pluie,
+                backgroundColor: 'blue',
+                label: 'Précipitations (mm)',
+                fill: false,
+                tension: 0
+            },{
+                type: 'line',
+                data: cumul,
+                borderColor: 'lightblue',
+                fill: false,
+                label: 'Cumul (mm)'
+            }],
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                        unit: 'day'
+                    }
+                }]
+            }
+        }
+    });
+
+
+
+/*
+    AVERAGE CHART
+*/
+
+
+
+    var avgMinTemp = [0,0,0,0,0,0,0,0,0,0,0,0];
+    var count = 0;
+    var currentMonth = 2;
+    for (var i in minTemp) {
+        var current = minTemp[i];
+        var month = (new Date(current.x)).getMonth();
+        
+        if (month > currentMonth) {
+            if (count > 0) {
+                avgMinTemp[currentMonth] /= count;
+            }
+            count = 0;
+            currentMonth = month;
+        }
+        
+        avgMinTemp[month] += current.y;
+        count++;
+
+    }
+    if (count > 0) {
+        avgMinTemp[currentMonth] /= count;
+    }
+    
+
+    var avgMaxTemp = [0,0,0,0,0,0,0,0,0,0,0,0];
+    count = 0;
+    currentMonth = 2;
+    for (var i in maxTemp) {
+        var current = maxTemp[i];
+        var month = (new Date(current.x)).getMonth();
+        
+        if (month > currentMonth) {
+            if (count > 0) {
+                avgMaxTemp[currentMonth] /= count;
+            }
+            count = 0;
+            currentMonth = month;
+        }
+        
+        avgMaxTemp[month] += current.y;
+        count++;
+
+    }
+    if (count > 0) {
+        avgMaxTemp[currentMonth] /= count;
+    }
+    
+
+var dataAvgMin = [];
+var i = 0;
+for (const elem of avgMinTemp) {
+    if (i >= 3 && i<8) {
+        
+    var d = (new Date());
+    d.setDate(1);
+    d.setMonth(i)
+    var datestring = d.getFullYear() + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2) ;
+    dataAvgMin.push({x:datestring, y:elem});
+
+    d.setMonth(i+1);
+    d.setDate(0);
+    datestring = d.getFullYear() + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2) ;
+    dataAvgMin.push({x:datestring, y:elem});
+
+    }
+    i++;
+} 
+i=0;
+var dataAvgMax = [];
+for (const elem of avgMaxTemp) {
+     if (i >= 3 && i<8) {
+     
+    var d = (new Date());
+    d.setDate(1);
+    d.setMonth(i)
+    var datestring = d.getFullYear() + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2) ;
+
+    dataAvgMax.push({x:datestring, y:elem});
+
+    d.setMonth(i+1);
+    d.setDate(0);
+    var datestring = d.getFullYear() + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2) ;
+
+    dataAvgMax.push({x:datestring, y:elem});
+     }
+    i++;
+} 
+
+
+
+var ctx = 'myChartAvg';
+    var myChartRain = new Chart(ctx, {
     type: 'line',
     data: {
         datasets: [{
-            type: 'bar',
-            data: pluie,
-            backgroundColor: 'blue',
-            label: 'Précipitations (mm)'
+            type: 'line',
+            data: dataAvgMin,
+            borderColor: 'blue',
+            label: 'Moyenne Min',
+            fill: false,
+            tension: 0
+        },{
+            data: maxTempNorm,
+            borderColor: '#ffcccb',
+            fill: false,
+            label: 'Norm. max (°C)',
+            pointStyle: 'line',
+            tension: 0
         },{
             type: 'line',
-            data: cumul,
-            color: 'lightblue',
+            data: dataAvgMax,
+            borderColor: 'red',
             fill: false,
-            label: 'Cumul (mm)'
+            label: 'Moyenne Max',
+            tension: 0
+        },{
+            data: minTempNorm,
+            borderColor: 'lightblue',
+            fill: false,
+            label: 'Norm. min (°C)',
+            pointStyle: 'line',
+            tension: 0
         }],
     },
     options: {
